@@ -52,8 +52,7 @@ public class libreria {
         }
     }
 
-}
-public class libreria {
+
 
         /**
          * Muestra el turno de cada jugador
