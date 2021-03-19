@@ -54,10 +54,10 @@ public class libreria {
 
     static Scanner teclado = new Scanner(System.in);
 
-    //Insertamos una posicion de una matriz un simbolo concreto
-    public static void insertarEn(char[][] matriz, int fila, int columna, char simbolo) {
+    //Insertamos una posicion de una matriz un determinado numero de fila y columna
+    public static void insertarEn(char[][] matriz, int fila, int columna, char vacio) {
 
-        matriz[fila][columna] = simbolo;
+        matriz[fila][columna] = vacio;
 
     }
 
@@ -65,25 +65,75 @@ public class libreria {
     public static int pedirInteger(String mensaje) {
         System.out.println(mensaje);
         int numero = teclado.nextInt();
+
         return numero;
     }
 
-    //Rellenamos la matriz con un simbolo
-    public static void rellenarMatriz(char[][] matriz, char simbolo) {
+    //Rellenamos la matriz con la variable vacio -
+    /public static void rellenarMatriz(char[][] matriz, char vacio) {
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
-                matriz[i][j] = simbolo;
+                matriz[i][j] = vacio;
             }
         }
     }
 
-    //Indicamos si en una posicion hay una marca
-    public static boolean hayValorPosicion(char[][] matriz, int fila, int columna, char simboloDef) {
-        if (matriz[fila][columna] != simboloDef) {
+    //Indicamos si una posicion esta ocupada o con la variable vacio -
+    public static boolean hayValorPosicion(char[][] matriz, int fila, int columna, char vacio) {
+        if (matriz[fila][columna] != vacio) {
             return true;
         }
         return false;
     }
+
+    /**
+     *  Muestra quien es el ganador de la partida
+     * @param lineaGanadora
+     * @param J1
+     * @param J2
+     * @param numeroGanador
+     */
+
+    public static void ganador (char lineaGanadora, char J1,char J2, int numeroGanador) {
+
+        switch (numeroGanador) {
+
+            case 1:
+                if (lineaGanadora == J1) {
+                    System.out.println("Gandor jugador 1 por linea");
+
+                } else {
+                    System.out.println("Gandor jugador 2 por linea");
+                }
+                break;
+
+            case 2:
+                if (lineaGanadora == J1) {
+                    System.out.println("Gandor jugador 1 por columna");
+
+                } else {
+                    System.out.println("Gandor jugador 2 por columna");
+                }
+                break;
+
+            case 3:
+                if (lineaGanadora == J1) {
+                    System.out.println("Gandor jugador 1 por diagonal");
+
+                } else {
+                    System.out.println("Gandor jugador 2 por diagonal");
+                }
+                break;
+
+        }
+
+
+    }
+
+
+
+
+
 
 }
