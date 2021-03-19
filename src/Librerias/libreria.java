@@ -70,7 +70,7 @@ public class libreria {
     }
 
     //Rellenamos la matriz con la variable vacio -
-    /public static void rellenarMatriz(char[][] matriz, char vacio) {
+    public static void rellenarMatriz(char[][] matriz, char vacio) {
 
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz.length; j++) {
