@@ -130,7 +130,46 @@ public class libreria {
 
 
     }
+    public static String ganadortxt(char lineaGanadora, char J1, char J2, int numeroGanador) {
+        String ganadores="";
 
+
+        if(numeroGanador==1) {
+            if (lineaGanadora == J1) {
+
+                return    ganadores = "Jugador 1 por linea";
+            } else {
+
+                return    ganadores = "Jugador 2 por linea";
+            }
+        }
+
+
+        if(numeroGanador==2) {
+            if (lineaGanadora == J1) {
+
+                return   ganadores = "Jugador 1 por columna";
+            } else {
+
+                return    ganadores = "Jugador 2 por columna";
+            }
+        }
+
+        if(numeroGanador==3) {
+            if (lineaGanadora == J1) {
+
+                return   ganadores = "Jugador 1 por diagonal";
+            } else {
+
+                return     ganadores = "Jugador 2 por diagonal";
+            }
+        }
+        if(numeroGanador==4) {
+            return ganadores = "Hay un empate";
+
+        }
+        return ganadores;
+    }
 
 
 
