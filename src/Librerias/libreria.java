@@ -10,7 +10,7 @@ public class libreria {
      */
 
 
-    public void mostrarTurnoActual(boolean turno) {
+    public static  void mostrarTurnoActual(boolean turno) {
         if (turno) {
             System.out.println("Le toca alJugador 1");
         } else {
