@@ -2,7 +2,7 @@ package Librerias;
 import java.util.Scanner;
 
 public class libreria {
-
+    static Scanner teclado = new Scanner(System.in);
     /**
      * Muestra el turno de cada jugador
      *
@@ -32,7 +32,7 @@ public class libreria {
 
         if (fila >= 0 && fila < tablero.length && columna >= 0 && columna < tablero.length) {
             return true;
-        }
+        }else
         return false;
     }
 
@@ -52,10 +52,13 @@ public class libreria {
     }
 
 
-    static Scanner teclado = new Scanner(System.in);
+
+
+
+
 
     //Insertamos una posicion de una matriz un determinado numero de fila y columna
-    //Insertamos una posicion de una matriz un determinado numero de fila y columna
+
     public static void insertarEn(char[][] matriz, int fila, int columna, char vacio) {
 
         matriz[fila][columna] = vacio;
@@ -80,8 +83,6 @@ public class libreria {
         }while (numero<=0);
         return numero;
     }
-
-
 
 
     //Rellenamos la matriz con la variable vacio -
