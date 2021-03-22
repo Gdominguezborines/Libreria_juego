@@ -1,8 +1,10 @@
 package Librerias;
+
 import java.util.Scanner;
 
 public class libreria {
     static Scanner teclado = new Scanner(System.in);
+
     /**
      * Muestra el turno de cada jugador
      *
@@ -10,7 +12,7 @@ public class libreria {
      */
 
 
-    public static  void mostrarTurnoActual(boolean turno) {
+    public static void mostrarTurnoActual(boolean turno) {
         if (turno) {
             System.out.println("Le toca alJugador 1");
         } else {
@@ -32,8 +34,8 @@ public class libreria {
 
         if (fila >= 0 && fila < tablero.length && columna >= 0 && columna < tablero.length) {
             return true;
-        }else
-        return false;
+        } else
+            return false;
     }
 
     /**
@@ -50,11 +52,6 @@ public class libreria {
             System.out.println("");
         }
     }
-
-
-
-
-
 
 
     //Insertamos una posicion de una matriz un determinado numero de fila y columna
@@ -74,13 +71,13 @@ public class libreria {
             while (!teclado.hasNextInt()) {
                 System.out.println("Valor no válido !!!!");
                 teclado.next();
-                System.out.println("Escribe un numero entero !!!!! \n"+mensaje);
+                System.out.println("Escribe un numero entero !!!!! \n" + mensaje);
             }
             numero = teclado.nextInt();
             if (numero <= 0) {
                 System.out.println("tiene que ser mayor que cero ya que cero no es ninguna posiccion");
             }
-        }while (numero<=0);
+        } while (numero <= 0);
         return numero;
     }
 
@@ -104,14 +101,15 @@ public class libreria {
     }
 
     /**
-     *  Muestra quien es el ganador de la partida
+     * Muestra quien es el ganador de la partida
+     *
      * @param lineaGanadora
      * @param J1
      * @param J2
      * @param numeroGanador
      */
 
-    public static void ganador (char lineaGanadora, char J1,char J2, int numeroGanador) {
+    public static void ganador(char lineaGanadora, char J1, char J2, int numeroGanador) {
 
         switch (numeroGanador) {
 
@@ -146,49 +144,47 @@ public class libreria {
 
 
     }
+
     public static String ganadortxt(char lineaGanadora, char J1, char J2, int numeroGanador) {
-        String ganadores="";
+        String ganadores = "";
 
 
-        if(numeroGanador==1) {
+        if (numeroGanador == 1) {
             if (lineaGanadora == J1) {
 
-                return    ganadores = "Jugador 1 por linea";
+                return ganadores = "Jugador 1 por linea";
             } else {
 
-                return    ganadores = "Jugador 2 por linea";
+                return ganadores = "Jugador 2 por linea";
             }
         }
 
 
-        if(numeroGanador==2) {
+        if (numeroGanador == 2) {
             if (lineaGanadora == J1) {
 
-                return   ganadores = "Jugador 1 por columna";
+                return ganadores = "Jugador 1 por columna";
             } else {
 
-                return    ganadores = "Jugador 2 por columna";
+                return ganadores = "Jugador 2 por columna";
             }
         }
 
-        if(numeroGanador==3) {
+        if (numeroGanador == 3) {
             if (lineaGanadora == J1) {
 
-                return   ganadores = "Jugador 1 por diagonal";
+                return ganadores = "Jugador 1 por diagonal";
             } else {
 
-                return     ganadores = "Jugador 2 por diagonal";
+                return ganadores = "Jugador 2 por diagonal";
             }
         }
-        if(numeroGanador==4) {
+        if (numeroGanador == 4) {
             return ganadores = "Hay un empate";
 
         }
         return ganadores;
     }
-
-
-
 
 
 }
