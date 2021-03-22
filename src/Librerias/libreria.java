@@ -83,13 +83,6 @@ public class libreria {
 
 
 
-    //pedimos un numero y lo devolvemos
-    public static int pedirInteger(String mensaje) {
-        System.out.println(mensaje);
-        int numero = teclado.nextInt();
-
-        return numero;
-    }
 
     //Rellenamos la matriz con la variable vacio -
     public static void rellenarMatriz(char[][] matriz, char vacio) {
